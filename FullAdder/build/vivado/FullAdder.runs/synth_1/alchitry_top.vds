@@ -1,0 +1,365 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Oct 28 17:24:23 2025
+# Process ID         : 43744
+# Current directory  : /home/eddie/alchitry/FullAdder/build/vivado/FullAdder.runs/synth_1
+# Command line       : vivado -log alchitry_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source alchitry_top.tcl
+# Log file           : /home/eddie/alchitry/FullAdder/build/vivado/FullAdder.runs/synth_1/alchitry_top.vds
+# Journal file       : /home/eddie/alchitry/FullAdder/build/vivado/FullAdder.runs/synth_1/vivado.jou
+# Running On         : eddie-HP-Pavilion-Gaming-Laptop-16-a0xxx
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz
+# CPU Frequency      : 800.000 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8085 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 12380 MB
+# Available Virtual  : 8210 MB
+#-----------------------------------------------------------
+source alchitry_top.tcl -notrace
+Command: synth_design -top alchitry_top -part xc7a35tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tftg256-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 43774
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2109.340 ; gain = 442.711 ; free physical = 170 ; free virtual = 6745
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alchitry_top' [/home/eddie/alchitry/FullAdder/build/vivado/FullAdder.srcs/sources_1/imports/source/alchitry_top.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'reset_conditioner' [/home/eddie/alchitry/FullAdder/build/vivado/FullAdder.srcs/sources_1/imports/source/reset_conditioner.sv:7]
+	Parameter STAGES bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'reset_conditioner' (0#1) [/home/eddie/alchitry/FullAdder/build/vivado/FullAdder.srcs/sources_1/imports/source/reset_conditioner.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'adder' [/home/eddie/alchitry/FullAdder/build/vivado/FullAdder.srcs/sources_1/imports/source/adder.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (0#1) [/home/eddie/alchitry/FullAdder/build/vivado/FullAdder.srcs/sources_1/imports/source/adder.sv:7]
+INFO: [Synth 8-6155] done synthesizing module 'alchitry_top' (0#1) [/home/eddie/alchitry/FullAdder/build/vivado/FullAdder.srcs/sources_1/imports/source/alchitry_top.sv:7]
+WARNING: [Synth 8-3917] design alchitry_top has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[4] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[3] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[2] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[1] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[0] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][7] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][6] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][5] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][4] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][3] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][2] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][1] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][0] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][7] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][6] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][5] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][4] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][3] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][2] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][1] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][0] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][7] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][6] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][5] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][4] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][3] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][2] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[7] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[6] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[5] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[4] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[3] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[2] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[1] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[0] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_select[3] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_select[2] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_select[1] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_select[0] driven by constant 1
+WARNING: [Synth 8-7129] Port io_button[4] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[3] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[2] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[1] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[0] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][7] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][6] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][5] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][4] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][3] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][2] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][1] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][7] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][6] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][5] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][4] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][3] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][2] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][1] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][7] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][6] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][5] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][4] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][3] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][2] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][1] in module alchitry_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2182.309 ; gain = 515.680 ; free physical = 154 ; free virtual = 6635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2200.121 ; gain = 533.492 ; free physical = 154 ; free virtual = 6635
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2200.121 ; gain = 533.492 ; free physical = 154 ; free virtual = 6635
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2200.121 ; gain = 0.000 ; free physical = 154 ; free virtual = 6635
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/eddie/alchitry/FullAdder/build/constraint/alchitry.xdc]
+Finished Parsing XDC File [/home/eddie/alchitry/FullAdder/build/constraint/alchitry.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/eddie/alchitry/FullAdder/build/constraint/alchitry.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/alchitry_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/alchitry_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/eddie/alchitry/FullAdder/build/constraint/au_props.xdc]
+Finished Parsing XDC File [/home/eddie/alchitry/FullAdder/build/constraint/au_props.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2281.891 ; gain = 0.000 ; free physical = 155 ; free virtual = 6630
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2281.926 ; gain = 0.000 ; free physical = 153 ; free virtual = 6629
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2281.926 ; gain = 615.297 ; free physical = 142 ; free virtual = 6623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2289.895 ; gain = 623.266 ; free physical = 142 ; free virtual = 6623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2289.895 ; gain = 623.266 ; free physical = 143 ; free virtual = 6623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2289.895 ; gain = 623.266 ; free physical = 142 ; free virtual = 6624
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design alchitry_top has port led[7] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[6] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[5] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[4] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[3] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[2] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[1] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port led[0] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][7] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][6] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][5] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][4] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][3] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][2] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][1] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[2][0] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][7] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][6] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][5] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][4] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][3] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][2] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][1] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[1][0] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][7] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][6] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][5] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][4] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][3] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_led[0][2] driven by constant 0
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[7] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[6] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[5] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[4] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[3] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[2] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[1] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_segment[0] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_select[3] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_select[2] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_select[1] driven by constant 1
+WARNING: [Synth 8-3917] design alchitry_top has port io_select[0] driven by constant 1
+WARNING: [Synth 8-7129] Port clk in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst_n in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[4] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[3] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[2] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[1] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_button[0] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][7] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][6] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][5] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][4] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][3] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][2] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[2][1] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][7] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][6] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][5] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][4] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][3] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][2] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[1][1] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][7] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][6] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][5] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][4] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][3] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][2] in module alchitry_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port io_dip[0][1] in module alchitry_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2289.895 ; gain = 623.266 ; free physical = 135 ; free virtual = 6622
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2352.895 ; gain = 686.266 ; free physical = 133 ; free virtual = 6511
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2353.895 ; gain = 687.266 ; free physical = 133 ; free virtual = 6511
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2362.910 ; gain = 696.281 ; free physical = 125 ; free virtual = 6503
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2546.723 ; gain = 880.094 ; free physical = 147 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2546.723 ; gain = 880.094 ; free physical = 147 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2546.723 ; gain = 880.094 ; free physical = 147 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2546.723 ; gain = 880.094 ; free physical = 147 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2546.723 ; gain = 880.094 ; free physical = 147 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2546.723 ; gain = 880.094 ; free physical = 147 ; free virtual = 6363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     2|
+|2     |IBUF |     4|
+|3     |OBUF |    45|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2546.723 ; gain = 880.094 ; free physical = 147 ; free virtual = 6363
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2546.723 ; gain = 798.289 ; free physical = 147 ; free virtual = 6363
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2546.730 ; gain = 880.094 ; free physical = 147 ; free virtual = 6363
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2546.730 ; gain = 0.000 ; free physical = 143 ; free virtual = 6362
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2602.750 ; gain = 0.000 ; free physical = 292 ; free virtual = 6517
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a7211da3
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 139 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 2602.785 ; gain = 1073.305 ; free physical = 292 ; free virtual = 6516
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1887.173; main = 1727.843; forked = 274.083
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3432.777; main = 2602.754; forked = 963.863
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2626.762 ; gain = 0.000 ; free physical = 292 ; free virtual = 6516
+INFO: [Common 17-1381] The checkpoint '/home/eddie/alchitry/FullAdder/build/vivado/FullAdder.runs/synth_1/alchitry_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file alchitry_top_utilization_synth.rpt -pb alchitry_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 28 17:24:54 2025...
