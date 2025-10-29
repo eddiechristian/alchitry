@@ -1,0 +1,29 @@
+module seven_seg_digit (
+    input value[4],
+    output segs[8],
+    input period
+) {
+    sig out[8];
+    always {
+        case(value){
+            0:out =  8b00111111;
+            1:out =  8b00000110;
+            2:out =  8b01011011;
+            3:out =  8b01001111;
+            4:out =  8b01100110;
+            5:out =  8b01101101;
+            6:out =  8b01111101;
+            7:out =  8b00000111;
+            8:out =  8b01111111;
+            9:out =  8b01100111;
+            10:out = 8b01110111;
+            11:out = 8b01111100;
+            12:out = 8b00111001;
+            13:out = 8b01011110;
+            14:out = 8b01111001;
+            15:out = 8b01110001;
+            default:out =8b0000000;
+        }
+        segs = out | (period << 7);
+    }
+}
