@@ -1,5 +1,6 @@
 module seven_seg_digit (
     input value[4],
+    input blank,   // if true then no segments lit.
     output segs[8],
     input period
 ) {
@@ -24,6 +25,10 @@ module seven_seg_digit (
             15:out = 8b01110001;
             default:out =8b0000000;
         }
-        segs = out | (period << 7);
+        if(blank){
+            segs = 8b00000000;
+        }else{
+            segs = out | (period << 7);
+        }
     }
 }

@@ -23,10 +23,10 @@ module alchitry_top (
             seven_seg_multiplexer seg_multi(.segs(segs));
         }
     }
-     seven_seg_digit  seven_seg1(.value(io_dip[0][4:0]), .period(io_dip[2][0]));
-     seven_seg_digit  seven_seg2(.value(io_dip[0][7:4]), .period(io_dip[2][0]));
-     seven_seg_digit  seven_seg3(.value(io_dip[1][4:0]), .period(io_dip[2][0]));
-     seven_seg_digit  seven_seg4(.value(io_dip[1][7:4]), .period(io_dip[2][0]));
+     seven_seg_digit  seven_seg1(.value(io_dip[0][4:0]), .blank(0), .period(io_dip[2][0]));
+     seven_seg_digit  seven_seg2(.value(io_dip[0][7:4]), .blank(0), .period(io_dip[2][0]));
+     seven_seg_digit  seven_seg3(.value(io_dip[1][4:0]), .blank(0), .period(io_dip[2][0]));
+     seven_seg_digit  seven_seg4(.value(io_dip[1][7:4]), .blank(1), .period(io_dip[2][0]));
    
     always {
         reset_cond.in = ~rst_n  // input raw inverted reset signal
@@ -43,6 +43,7 @@ module alchitry_top (
         
         io_segment = seg_multi.out  ^ 8b11111111;
         io_select = (1 << seg_multi.sel ) ^ 4b1111;
+       
         
     }
 }
