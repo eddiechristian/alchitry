@@ -1,0 +1,53 @@
+module alchitry_top (
+    input clk,              // 100MHz clock
+    input rst_n,            // reset button (active low)
+    output led[8],          // 8 user controllable LEDs
+    input usb_rx,           // USB->Serial input
+    output usb_tx,          // USB->Serial output
+    output io_led[3][8],    // LEDs on IO Shield
+    output io_segment[8],   // 7-segment LEDs on IO Shield
+    output io_select[4],    // Digit select on IO Shield
+    input io_button[5],     // 5 buttons on IO Shield
+    input io_dip[3][8]      // DIP switches on IO Shield
+) {
+    
+    sig rst                 // reset signal
+    sig segs[4][8] 
+    
+    .clk(clk) {
+        // The reset conditioner is used to synchronize the reset signal to the FPGA
+        // clock. This ensures the entire FPGA comes out of reset at the same time.
+        reset_conditioner reset_cond
+    }
+    
+    .clk(clk){
+        .rst(rst){
+            seven_seg_multiplexer seg_multi(.segs(segs));
+            decimal_to_hex dec_to_hex(.decimal(586));
+        }
+    }
+    
+     seven_seg_digit  seven_seg1(.value(dec_to_hex.hex_digits[0]), .blank(dec_to_hex.blank_digits[0]), .period(io_dip[2][0]));
+     seven_seg_digit  seven_seg2(.value(dec_to_hex.hex_digits[1]), .blank(dec_to_hex.blank_digits[1]), .period(io_dip[2][0]));
+     seven_seg_digit  seven_seg3(.value(dec_to_hex.hex_digits[2]), .blank(dec_to_hex.blank_digits[2]), .period(io_dip[2][0]));
+     seven_seg_digit  seven_seg4(.value(dec_to_hex.hex_digits[3]), .blank(dec_to_hex.blank_digits[3]), .period(io_dip[2][0]));
+   
+    always {
+        reset_cond.in = ~rst_n  // input raw inverted reset signal
+        rst = reset_cond.out    // conditioned reset
+        
+        led = 8h00              // turn LEDs off
+        
+        usb_tx = usb_rx         // loop serial port
+        
+        io_led = 3x{{8h00}}
+        io_segment = 8hff
+        io_select = 4hf
+        
+        segs = {seven_seg4.segs, seven_seg3.segs, seven_seg2.segs, seven_seg1.segs};
+        io_segment = seg_multi.out  ^ 8b11111111;
+        io_select = (1 << seg_multi.sel ) ^ 4b1111;
+        io_led[0] =dec_to_hex.blank_digits[0];
+       
+    }
+}

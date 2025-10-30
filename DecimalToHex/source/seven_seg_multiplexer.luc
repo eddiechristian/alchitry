@@ -1,0 +1,28 @@
+module seven_seg_multiplexer #(NUM_SEGMENTS = 4, MAX_VALUE=5)
+(
+    input clk,  // clock
+    input rst,  // reset
+    input segs[4][8],
+    output out[8],
+    output sel[2]
+) {
+    .clk(clk){
+        .rst(rst){
+            
+            dff ctr[$clog2(MAX_VALUE)];
+            dff ctr2[2];
+        }
+    }
+    always {
+        ctr.d = ctr.q + 1;
+        if(ctr.q == MAX_VALUE){
+            ctr.d = 0;
+            ctr2.d = ctr2.q + 1;
+            if(ctr2.q == NUM_SEGMENTS -1){
+                ctr2.d = 0;
+            }
+        }
+        out = segs[ctr2.q];
+        sel = ctr2.q ;
+    }
+}

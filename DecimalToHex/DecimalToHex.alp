@@ -1,0 +1,108 @@
+{
+    "project": {
+        "type": "V1.3",
+        "projectName": "DecimalToHex",
+        "board": "Alchitry Au V2",
+        "sourceFiles": [
+            {
+                "file": {
+                    "type": "DiskFile",
+                    "path": "source/alchitry_top.luc"
+                },
+                "top": true
+            },
+            {
+                "file": {
+                    "type": "Component",
+                    "path": "Conditioning/reset_conditioner.luc"
+                }
+            },
+            {
+                "file": {
+                    "type": "DiskFile",
+                    "path": "source/seven_seg_digit.luc"
+                }
+            },
+            {
+                "file": {
+                    "type": "DiskFile",
+                    "path": "source/seven_seg_multiplexer.luc"
+                }
+            },
+            {
+                "file": {
+                    "type": "DiskFile",
+                    "path": "source/decimal_to_hex.luc"
+                }
+            },
+            {
+                "file": {
+                    "type": "Component",
+                    "path": "Interfaces/uart_rx.luc"
+                }
+            },
+            {
+                "file": {
+                    "type": "Component",
+                    "path": "Interfaces/uart_tx.luc"
+                }
+            },
+            {
+                "file": {
+                    "type": "Component",
+                    "path": "Miscellaneous/arbiter.luc"
+                }
+            },
+            {
+                "file": {
+                    "type": "Component",
+                    "path": "Miscellaneous/encoder.luc"
+                }
+            }
+        ],
+        "constraintFiles": [
+            {
+                "file": {
+                    "type": "Component",
+                    "path": "Constraints/alchitry.acf"
+                }
+            },
+            {
+                "file": {
+                    "type": "Component",
+                    "path": "Constraints/io_v2.acf"
+                }
+            }
+        ],
+        "ipCores": [
+            {
+                "name": "mult_gen_0",
+                "stub": {
+                    "file": {
+                        "type": "DiskFile",
+                        "path": "cores/mult_gen_0/mult_gen_0_stub.v"
+                    }
+                },
+                "files": [
+                    {
+                        "path": "cores/mult_gen_0/mult_gen_0.xci"
+                    }
+                ]
+            },
+            {
+                "name": "div_gen_0",
+                "stub": {
+                    "file": {
+                        "type": "DiskFile",
+                        "path": "cores/div_gen_0/div_gen_0_stub.v"
+                    }
+                },
+                "files": [
+                    {
+                        "path": "cores/div_gen_0/div_gen_0.xci"
+                    }
+                ]
+            }
+        ]
+    }
+}
