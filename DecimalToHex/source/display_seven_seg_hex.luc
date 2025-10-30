@@ -1,0 +1,23 @@
+module display_seven_seg_hex (
+    input clk,  // clock
+    input rst,  // reset    
+    input decimal[16], // 16 bits holds 4 hex digits
+    output hex_digits[4][4], //4 hex digits 4 bits apiece
+    output blank_digits[4], // bitmask 0000= no blanks 1000 Most significant nibble. 0100 second most significant nibble.
+    output arb_out[12]
+) {
+    arbiter arb(#WIDTH(12), .in(decimal) );
+    encoder enc(#WIDTH(12), .in(arb.out));
+    always {        
+        arb_out = enc.out;
+        hex_digits = {decimal[15:12], decimal[11:8], decimal[7:4], decimal[3:0]};
+        blank_digits = b0000;
+        if (enc.out < 4){
+            blank_digits = b1110;
+        }else if(enc.out < 8){
+            blank_digits = b1100;
+        }else if(enc.out < 12){
+            blank_digits = b1000;
+        }
+    }
+}
